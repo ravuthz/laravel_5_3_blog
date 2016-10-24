@@ -73,3 +73,18 @@ php artisan make:seeder UsersTableSeeder
 
 ## change config/cache.php OR .env
 CACHE_DRIVER=array
+
+## install laravelcollective/html
+```
+composer require "laravelcollective/html":"^5.2.0"
+```
+
+## change config/app.php
+```
+providers
+    Collective\Html\HtmlServiceProvider::class,
+
+alias
+    'Form' => Collective\Html\FormFacade::class,
+    'Html' => Collective\Html\HtmlFacade::class,
+```
