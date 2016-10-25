@@ -74,7 +74,7 @@ php artisan make:seeder UsersTableSeeder
 ## change config/cache.php OR .env
 CACHE_DRIVER=array
 
-## install laravelcollective/html
+## install laravelcollective/html (FORM ONLY)
 ```
 composer require "laravelcollective/html":"^5.2.0"
 ```
@@ -87,4 +87,34 @@ providers
 alias
     'Form' => Collective\Html\FormFacade::class,
     'Html' => Collective\Html\HtmlFacade::class,
+```
+
+## create post resource
+```
+php artisan make:controller Admin/PostsController --resource
+
+php artisan make:model Post -m
+
+php artisan migrate
+```
+
+## install watson/bootstrap-form (REPLACE FORM ONLY WITH BOOTSTRAP)
+```
+composer require watson/bootstrap-form
+```
+
+## change config/app.php
+```
+providers
+    Collective\Html\HtmlServiceProvider::class,
+    Watson\BootstrapForm\BootstrapFormServiceProvider::class,
+alias
+    'Form'     => Collective\Html\FormFacade::class,
+    'HTML'     => Collective\Html\HtmlFacade::class,
+    'BootForm' => Watson\BootstrapForm\Facades\BootstrapForm::class,
+```
+
+## generate configure
+```
+php artisan vendor:publish
 ```

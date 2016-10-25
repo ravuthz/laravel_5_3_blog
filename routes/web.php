@@ -18,3 +18,10 @@ Route::get('/', function () {
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');
+
+Route::group(['prefix' => 'admin', 'namespace' => 'Admin'], function() {
+    Route::get('/', 'PostsController@index');
+    Route::resource('posts', 'PostsController', ['as' => 'admin']);
+    // as => admin = 'admin.posts...'
+    // Route::resource('posts', 'PostsController', ['names' => ['index' => 'admin_post_index']]);
+});

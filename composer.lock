@@ -4,8 +4,8 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "16250dc29ad7d05cb933695c36d1d86e",
-    "content-hash": "da84ad308963c1c3d7d74b999533bb7e",
+    "hash": "00d396c36c8e3e82b20dd971b35cf9db",
+    "content-hash": "efb8e21193ff3776ac2b5e78a87ebde4",
     "packages": [
         {
             "name": "classpreloader/classpreloader",
@@ -1920,6 +1920,55 @@
                 "environment"
             ],
             "time": "2016-09-01 10:05:43"
+        },
+        {
+            "name": "watson/bootstrap-form",
+            "version": "1.0.17",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/dwightwatson/bootstrap-form.git",
+                "reference": "eec6f0d96d1ca69030ef7bcb3c9242ac5ef78ef6"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/dwightwatson/bootstrap-form/zipball/eec6f0d96d1ca69030ef7bcb3c9242ac5ef78ef6",
+                "reference": "eec6f0d96d1ca69030ef7bcb3c9242ac5ef78ef6",
+                "shasum": ""
+            },
+            "require": {
+                "illuminate/config": "~5.0",
+                "illuminate/session": "~5.0",
+                "illuminate/support": "~5.0",
+                "laravelcollective/html": "~5.0",
+                "php": ">=5.4.0"
+            },
+            "require-dev": {
+                "mockery/mockery": "0.9.*",
+                "phpunit/phpunit": "~4.6"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-4": {
+                    "Watson\\BootstrapForm\\": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Dwight Watson",
+                    "email": "dwightwatson@me.com"
+                }
+            ],
+            "description": "Laravel 5 form wrappers for Bootstrap 3.",
+            "keywords": [
+                "bootstrap",
+                "form",
+                "laravel"
+            ],
+            "time": "2016-10-24 07:57:52"
         },
         {
             "name": "zizaco/entrust",
